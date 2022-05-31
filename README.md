@@ -1,2 +1,2 @@
-# BootCamp_Santandere_2022
+# BootCamp_Santander_2022
 BootCamp_FullStack_Santander_2022
