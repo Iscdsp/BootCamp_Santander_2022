@@ -1,0 +1,11 @@
+.exercicios {
+  border: 2px solid rgb(0, 2, 128);
+  padding: 2%;
+  margin: 10px;
+}
+
+.background {
+  background-image: url(../assets/imgs/rick-and-morty-portal.jpg);
+  background-size: auto;
+  background-repeat: repeat;
+}

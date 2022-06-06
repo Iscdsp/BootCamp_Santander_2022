@@ -1,0 +1,17 @@
+.custom {
+  width: 400px;
+  border: 2px solid rgb(28, 11, 126);
+  margin: 0px auto;
+  padding: 0px;
+}
+.container {
+  max-width: 800px;
+}
+.background {
+  background-image: url("/src/assets/imgs/rick-and-morty-portal.jpg");
+}
+.exercicios {
+  border: 2px solid green !important;
+  padding: 2%;
+  margin: 10px auto;
+}

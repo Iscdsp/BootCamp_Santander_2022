@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="exercicios">
+    <h1 class="text-info text-center" [ngClass]="{ custom: count > 5 }">
+      Vamos contar!
+    </h1>
+
+    <h2 class="text-center">
+      Contando:
+      <span [ngStyle]="{ color: count < 10 ? 'red' : 'green' }">{{
+        count
+      }}</span>
+    </h2>
+  </div>
+  <div class="exercicios">
+    <h2 *ngIf="count > 7 && count < 15">
+      o contador está entre 7 e  15 !
+    </h2>
+  </div>
+  <div class="exercicios">
+    <h2 *ngIf="  count > 7; else menor ; " id=>
+    </h2>
+    <ng-template #menor><h2>O contador está menor que 7</h2></ng-template>
+    <h2 *ngIf="count > 15">O contador está maior que 15</h2>
+</div>
+<div class="exercicios">
+    <ul [ngSwitch]="count" class="list-group mx-auto col-3">
+        <li 
+        class="list-group-item"
+        *ngSwitchCase="5"
+        >este é o numero: 5</li>
+        <li 
+        class="list-group-item"
+        *ngSwitchCase="10"
+        >este é o numero: 10</li>
+        <li 
+        class="list-group-item"
+        *ngSwitchCase="15"
+        >este é o numero: 15</li>
+        <li 
+        class="list-group-item"
+        *ngSwitchCase="21"
+        >Chegamos ao fim da contagem.</li>
+        <li 
+        class="list-group-item"
+        *ngSwitchDefault
+        >Estamos contando...</li>
+
+    </ul>
+</div>
+
+<div class="exercicios">
+    <ul class="list-group mx-auto col-3">
+    <li class="list-group-item"
+     *ngFor="let pessoa of pessoas"
+     >O nome do(a) Cantor(a) é {{pessoa.firstName}}{{pessoa.lastName}} e sua idade é {{pessoa.age}} anos</li>
+</ul>
+</div>
+<div class="exercicios ">
+    <h3>{{nome}}</h3>
+    <button class="btn btn-success col-3 "(click)="clicou()">Cliquinmin</button>
+    
+    <div class="col-4 mx-auto">
+        <input [(ngModel)]="text" type="text" name="" id="" placeholder="Digite e veja na saída...">
+        <h4>Saida: {{text}} </h4>
+    </div>
+</div>
+</div>
+
+
+
+
+
