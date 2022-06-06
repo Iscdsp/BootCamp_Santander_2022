@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        padding-top: 10vh;
+        background-color: #222222;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+      }
+      .container-wrapped {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .inputs-login-senha-apiKey {
+        margin: 0 auto;
+        display: flex;
+        width: 280px;
+        height: 180px;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid rgb(201, 9, 9);
+        padding: 5vh 3vw;
+        gap: 2vh;
+        border-radius: 10px;
+      }
+      #login-button,
+      .ct {
+        color: #ffffff;
+        font-size: 18px;
+        background-color: transparent;
+        border: 1.5px solid rgb(201, 9, 9);
+        border-radius: 4px;
+        padding: 5px 45px;
+        transition: 0.2s ease-in;
+      }
+      #login-button:hover {
+        background-color: rgb(201, 9, 9);
+        border: 1.5px solid transparent;
+        box-shadow: 0 0 3px rgb(201, 9, 9), 0 0 7px rgb(201, 9, 9);
+      }
+      .lista {
+        display: flex;
+        flex-direction: column;
+        background-color: #525252;
+        border: 2px solid rgb(201, 9, 9);
+        width: 280px;
+        padding: 5vh 3vw;
+        border-radius: 10px;
+        gap: 5vh;
+      }
+
+      ul {
+        height: 300px;
+        width: 200px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      li {
+        border: 2px solid #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container-wrapped">
+      <div class="inputs-login-senha-apiKey">
+        <input id="login" placeholder="Login" onchange="preencherLogin()" />
+        <input
+          id="senha"
+          placeholder="Senha"
+          type="password"
+          onchange="preencherSenha()"
+        />
+        <input
+          id="api-key"
+          placeholder="Digite a Api Key"
+          onchange="preencherApi()"
+        />
+        <button id="login-button" disabled>Login</button>
+      </div>
+      <div id="search-container " class="lista">
+        <input id="search" placeholder="Escreva..." />
+        <button id="search-button">Pesquisar Filme</button>
+        <ul id="lista"></ul>
+      </div>
+    </section>
+    <script src="./dist/app.js"></script>
+  </body>
+</html>
