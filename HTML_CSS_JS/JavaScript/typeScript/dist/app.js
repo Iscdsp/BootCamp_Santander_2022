@@ -69,7 +69,7 @@ function validateLoginButton() {
     }
 }
 class HttpClient {
-    static get({ url = "string", method = "", body =  }) {
+    static get({ url = "string", method = "string", body = {} }) {
         return __awaiter(this, void 0, void 0, function* () {
             return new Promise((resolve, reject) => {
                 let request = new XMLHttpRequest();
@@ -127,7 +127,7 @@ function criarRequestToken() {
             url: `https://api.themoviedb.org/3/authentication/token/new?api_key=${apiKey}`,
             method: "GET",
         });
-        let RequestToken = String(Request_Token.request_token);
+        let RequestToken = Request_Token.request_token;
         console.log(RequestToken);
         return RequestToken;
     });
@@ -143,7 +143,7 @@ function logar() {
                 request_token: `${RequestToken}`,
             },
         });
-        console.log("logou!");
+        return console.log("logou!");
     });
 }
 function criarSessao() {
@@ -200,14 +200,3 @@ function pegarLista() {
         return result;
     });
 }
-/*Boa tarde, em minha aplicação preciso:
-
-Buscar filmes;
-
-apresentar uma lista com os resultados pesquisados;
-
-Permite a criação de listas de filmes e a posterior adição de filmes nela;
-
-já consigo buscar os filmes e coloca=los em uma lista e estou tendo dificuldades em logar, em fazer os processos de criar a lista e adicionar os filmes...
-
-segue o código: */ 

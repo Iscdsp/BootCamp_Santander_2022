@@ -71,7 +71,7 @@ function validateLoginButton() {
 }
 
 class HttpClient {
-  static async get({ url = "string", method = "", body = }) {
+  static async get({ url = "string", method = "string", body = <any>{} }) {
     return new Promise((resolve, reject) => {
       let request = new XMLHttpRequest();
       request.open(method, url, true);
@@ -129,7 +129,7 @@ async function criarRequestToken() {
     url: `https://api.themoviedb.org/3/authentication/token/new?api_key=${apiKey}`,
     method: "GET",
   });
-  let RequestToken: string = String(Request_Token.request_token);
+  let RequestToken: string = Request_Token.request_token;
 
   console.log(RequestToken);
   return RequestToken;
@@ -146,7 +146,7 @@ async function logar() {
     },
   });
 
-  console.log("logou!");
+  return console.log("logou!");
 }
 
 async function criarSessao() {
@@ -199,5 +199,3 @@ async function pegarLista() {
   console.log(result);
   return result;
 }
-
-
