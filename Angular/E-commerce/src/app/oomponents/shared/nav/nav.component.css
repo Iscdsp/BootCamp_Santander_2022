@@ -1,0 +1,18 @@
+.poke-font {
+  color: #ffff00;
+  text-decoration: none;
+  transition: 0.4s;
+  font-size: 16px;
+  letter-spacing: 0.4rem;
+  font-family: "Pokemon", Helvetica, sans-serif;
+}
+.poke-font:hover {
+  text-shadow: 1px 1px 0px blue, 2px 2px 0px blue, -1px -1px 0px blue;
+}
+.container-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgb(206, 31, 31);
+}

@@ -1,0 +1,8 @@
+.card-filter {
+  margin: 2rem 10rem;
+  padding: 0 auto;
+  display: flex;
+}
+.btn-filter {
+  margin-top: 1rem;
+}

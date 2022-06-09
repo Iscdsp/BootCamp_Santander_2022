@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="cont-card bg">
+    <img
+      src="https://www.serebii.net/itemdex/sprites/pgl/elixir.png"
+      alt=""
+      class="img"
+    />
+
+    <div class="">
+      <p class="item-poke">Elixir</p>
+      <p class="item-poke">Restores the PP of all moves by 10.</p>
+      <p class="item-poke">$3000</p>
+    </div>
+
+    <div class="btn-group">
+      <button type="button" class="btn btn-sm btn-primary">Buy</button>
+    </div>
+  </div>
+
+  <div class="cont-card" *ngFor="let item of items">
+    <app-production-item [item]="item"></app-production-item>
+  </div>
+</div>

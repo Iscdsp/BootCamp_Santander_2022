@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Pokemon";
+  src: url(../../../../assets/Pokemon\Solid.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
