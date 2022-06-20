@@ -3,7 +3,7 @@ package ex01;
 public class main {
 
     public static void main(String[] args) {
-        
+
         System.out.println("Exercícios calculadora");
         calculadora.soma(5, 11);
         calculadora.subtracao(12, 232);
@@ -14,14 +14,16 @@ public class main {
         mensagem.obterMensagem(8);
         mensagem.obterMensagem(13);
         mensagem.obterMensagem(20);
-    
+
         System.out.println("Exercício Empréstimo");
         emprestimo.calcular(1000, 2);
         emprestimo.calcular(1000, 3);
         emprestimo.calcular(1000, 5);
-        
 
-
+        Quadrilatero.area(5);
+        Quadrilatero.area(4, 2, 5);
+        Quadrilatero.area(2d, 7d);
+        Quadrilatero.area(2f, 6f);
 
     }
 }
